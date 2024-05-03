@@ -1,0 +1,141 @@
+@import '_config.scss';
+
+//navbar
+nav{
+    background-color: $primary-color;
+    
+}
+.navbar .navbar-nav .nav-item .nav-link{
+    color: white ;
+    font-family: $font-stack;
+    font-weight: bold; 
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar button{
+    background: $secondary-color;
+}
+
+//home
+.name h1 strong {
+    font-size: 10vh;
+  }
+  
+.name h4 strong {
+    font-size: 6vh;
+    color: $secondary-color;
+}
+.name{
+    background-image: url('../images/backSection2.jpg');
+    background-size: cover; 
+    background-position: center; 
+    padding: 180px;
+    color: white; 
+    width: 100%;
+    box-shadow: 0 0 25px 25px $primary-color inset;
+}
+
+
+//section
+section{
+    color: white;
+    font-family: $font-stack;
+}
+
+//skill
+.skill h4{
+    font-family: $font-stack;
+}
+.descSkill{
+    margin-top: 20px;
+    text-align: left;
+}
+.descSkill li{
+    font-family: $font-stack;
+}
+.skill img {
+    max-width: 80px;
+    margin: 10px;
+}
+.skill h4 {
+    font-size: 30px;
+}
+.skill{
+    border-color: $secondary-color;
+    border-style: solid;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.line{
+    z-index: -1;
+    height: 7px;
+    width: 80%;
+    left: -1%;
+    background: linear-gradient(65deg, $secondary-color 0%, $primary-color 100%, rgba(255, 209, 0, 0) 100%);
+}
+
+//progetti
+.card-group .card{
+    color: white;
+    background: none;
+    border-color: $secondary-color;
+    border-style: solid;
+    font-family: $font-stack;
+
+}
+
+.card-group .card-title{
+    color: $secondary-color;
+    font-weight: bold;
+}
+
+.card-tec{
+    color: $secondary-color;
+    font-weight: bold;
+}
+
+
+//esperienze
+.accordion .accordion-item{
+    color: white;
+    background: none;
+}
+.accordion button{
+    background:  $secondary-color;
+}
+.accordion-button .date-range {
+    float: right;
+}
+
+//contatti
+.contatti{
+    text-align: center;
+    margin: auto;
+    max-width: 800px;
+}
+
+//footer
+hr.dashed {
+    border-top: 10px solid $secondary-color;
+  }
+.social{
+    display: flex;
+    justify-content: space-between;
+}
+.social img {
+    width: 30px;
+    height: 30px;
+}
+.social H6 {
+   color: $secondary-color;
+   font-family: $font-stack;
+}
+footer .col{
+    margin: auto;
+}
+
+

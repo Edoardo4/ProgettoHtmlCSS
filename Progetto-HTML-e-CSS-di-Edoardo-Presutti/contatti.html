@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edoardo Presutti</title>
+        <link rel='stylesheet' href='css/style.css'/>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    </head>
+    <body style="background-color: #16181a;">
+        <header class="showcase">
+          <nav class="navbar navbar-expand-lg fixed-top">
+            <button class="navbar-toggler btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"  aria-label="Toggle navigation" >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+              <ul class="navbar-nav ">
+                  <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="index.html">
+                        <span class="badge bg-dark">01</span>
+                        // home
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#contatti">
+                        <span class="badge bg-dark">05</span>
+                        // contatti
+                      </a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+                
+        </header>
+        <section id="home">
+            <div class="container-fluid name">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1>
+                          <strong>Edoardo Presutti</strong> 
+                        </h1>
+                        <h4>
+                          <strong>Sofware Developer</strong>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+       <section>
+            <div class="row mb-5">
+                <div class="col-6 contatti">
+                    <h3 class="mt-5">Contattami</h3>
+                    <form id="myForm">
+                        <label for="name">Nome</label>
+                        <input type="name" name="name" class="form-control" id="name" placeholder="Inserisci Nome" required/>
+                           
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Inserisci Email" required>
+                        
+                        <label for="subject">Oggetto</label>
+                        <input type="text" name="subject" class="form-control" id="subject" placeholder="Inserisci Oggetto" required>
+
+                        <div class="form-group py-5">
+                            <label for="exampleFormControlTextarea1">Messaggio</label>
+                            <textarea class="form-control" name="message"  id="message" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Invia</button>
+                      </form>
+                </div>
+            </div>
+       </section>
+        <footer>
+          <div class="row">
+            <div class='col'>
+              <hr class="dashed">
+            </div>
+            <div class='col'>
+              <div class="social">
+                <h6>Edoardo Presutti</h6>
+                <a href="https://www.linkedin.com/in/edoardo-presutti-6b54521a5/" target="_blank">
+                    <img src="images/linkedin.png" alt="linkedin"/>
+                </a>
+                <a href="https://github.com/Edoardo4" target="_blank">
+                    <img src="images/github.png"  alt="gitHub"/>
+                </a>
+                <h6>Software Developer</h6>
+              </div>
+            </div>
+            <div class='col'>
+              <hr class="dashed">
+            </div>
+          </div>
+      </footer>
+    </body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">      (function () {
+        emailjs.init("_5E8qTYKdxx5JaJIT");
+      })();
+    </script>
+    <script>
+        document .getElementById("myForm") .addEventListener("submit", 
+        function (event) {
+            event.preventDefault();
+    
+            const serviceID = "service_uxss10m";
+            const templateID = "template_blnzens";
+    
+            emailjs.sendForm(serviceID, templateID, this).then(
+                (response) => {
+                console.log("SUCCESS!", response.status, response.text);
+                alert("Grazie per avermi contattato!");
+                },
+                (error) => {
+                console.log("FAILED...", error);
+                alert("Ops..qualcosa è andato storto", error);
+                }
+            );
+            });
+        </script>
+      
+</html>
